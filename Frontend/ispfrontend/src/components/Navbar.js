@@ -1,27 +1,54 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import './Navbar.css'; // Import your custom styles
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+    // Check if you're on the homepage
+    if (location.pathname === '/') {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
     } else {
-      navigate(`/${id}`);  // In case you're navigating to other pages like Cart, etc.
+      // If you're not on the homepage, navigate to the correct route
+      navigate(`/${id}`);
     }
   };
 
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
-    <nav>
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><button onClick={() => scrollToSection('packages')}>Packages</button></li>
-        <li><button onClick={() => scrollToSection('products')}>Products</button></li>
-        <li><Link to="/cart">Cart</Link></li>
-        <li><Link to="/payment">Payment</Link></li>
-        <li><Link to="/admin">Admin Dashboard</Link></li>
+    <nav className="navbar">
+      <div className="logo">
+        <Link to="/">ISP Service</Link>
+      </div>
+      <div className={`menu-toggle ${menuOpen ? 'is-active' : ''}`} onClick={toggleMenu}>
+        <span className="hamburger"></span>
+        <span className="hamburger"></span>
+        <span className="hamburger"></span>
+      </div>
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><Link to="/" onClick={toggleMenu}>Home</Link></li>
+        <li>
+          <button onClick={() => { scrollToSection('packages'); toggleMenu(); }}>
+            Packages
+          </button>
+        </li>
+        <li>
+          <button onClick={() => { scrollToSection('products'); toggleMenu(); }}>
+            Products
+          </button>
+        </li>
+        <li><Link to="/cart" onClick={toggleMenu}>Cart</Link></li>
+        <li><Link to="/payment" onClick={toggleMenu}>Payment</Link></li>
+        <li><Link to="/admin" onClick={toggleMenu}>Admin Dashboard</Link></li>
       </ul>
     </nav>
   );

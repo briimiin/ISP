@@ -1,0 +1,116 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  nav .logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links li a,
+  .nav-links li button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;  /* Remove underline */
+  }
+  
+  .nav-links li a:hover,
+  .nav-links li button:hover {
+    color: #f0a500;
+  }
+  
+  /* Mobile Styles */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .menu-toggle .hamburger {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-toggle.is-active .hamburger:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .menu-toggle.is-active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-toggle.is-active .hamburger:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Responsive Behavior */
+  @media (max-width: 768px) {
+    .nav-links {
+      position: fixed;
+      top: 30px; /* Ensure the links are directly below the navbar */
+      right: 0;
+      left: auto;
+      width: 66vw;
+      height: 90vh;
+      background-color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* Start at the top */
+      align-items: flex-start; /* Align links to the left */
+      padding-top: 20px; /* Adjust padding to avoid overlap with navbar */
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+  
+    .nav-links.open {
+      transform: translateX(0); /* Slide in when opened */
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+      padding-left: 30px; /* Left indent */
+      text-align: left;
+    }
+  
+    .menu-toggle {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      z-index: 10;
+    }
+  
+    .nav-links li a,
+    .nav-links li button {
+      font-size: 1.2rem;
+      text-decoration: none;  /* Ensure no underline in mobile view */
+    }
+  }
+  
