@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #1c1c1c;
     padding: 1rem;
   }
   
@@ -43,44 +43,54 @@
   .nav-links li button:hover {
     color: #f0a500;
   }
-  
-  /* Mobile Styles */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-  }
-  
-  .menu-toggle .hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-  }
-  
-  .menu-toggle.is-active .hamburger:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-  
-  .menu-toggle.is-active .hamburger:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-toggle.is-active .hamburger:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-  
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 11;
+}
+
+.menu-toggle .hamburger {
+  width: 30px; /* Increase width slightly for better alignment */
+  height: 3px;
+  background-color: white;
+  margin: 5px 0; /* Increase margin slightly */
+  transition: all 0.3s ease;
+  border-radius: 2px;
+  position: relative;
+}
+
+.menu-toggle.is-active .hamburger:nth-child(1) {
+  transform: translateY(9px) rotate(45deg); /* Move down and rotate to cross */
+  background-color: #f0a500;
+}
+
+.menu-toggle.is-active .hamburger:nth-child(2) {
+  opacity: 0; /* Hide middle bar */
+}
+
+.menu-toggle.is-active .hamburger:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg); /* Move up and rotate to cross */
+  background-color: #f0a500;
+}
+
+/* Ensuring symmetry and alignment */
+.menu-toggle .hamburger {
+  transform-origin: center center; /* Pivot from the center for both top and bottom lines */
+  width: 30px; /* Ensure consistent width for better alignment */
+}
+
   /* Responsive Behavior */
   @media (max-width: 768px) {
     .nav-links {
       position: fixed;
-      top: 30px; /* Ensure the links are directly below the navbar */
+      top: 60px; /* Ensure the links are directly below the navbar */
       right: 0;
       left: auto;
       width: 66vw;
       height: 90vh;
-      background-color: #333;
+      background-color: #1c1c1c;
       display: flex;
       flex-direction: column;
       justify-content: flex-start; /* Start at the top */
@@ -88,6 +98,8 @@
       padding-top: 20px; /* Adjust padding to avoid overlap with navbar */
       transform: translateX(100%);
       transition: transform 0.3s ease;
+      z-index: 1000; /* Bring menu in front */
+
     }
   
     .nav-links.open {

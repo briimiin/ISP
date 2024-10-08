@@ -7,7 +7,8 @@ import Products from './components/Products';  // Add back Products component
 import Cart from './components/Cart';
 import Payment from './components/Payment';
 import AdminDashboard from './components/AdminDashboard';
-
+import ContactUs from './components/ContactUs';
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -22,7 +23,10 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/contactus" element={<ContactUs />} />
       </Routes>
+      <Footer />
+
     </>
   );
 }

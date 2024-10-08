@@ -49,6 +49,8 @@ function Navbar() {
         <li><Link to="/cart" onClick={toggleMenu}>Cart</Link></li>
         <li><Link to="/payment" onClick={toggleMenu}>Payment</Link></li>
         <li><Link to="/admin" onClick={toggleMenu}>Admin Dashboard</Link></li>
+        <li><Link to="/contactus" onClick={toggleMenu}>ContactUs</Link></li>
+
       </ul>
     </nav>
   );

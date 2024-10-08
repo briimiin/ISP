@@ -1,23 +1,41 @@
 import React from 'react';
-import Packages from './Packages';  // Import the Packages component to be part of Home
-import Products from './Products';  // Import the Products component to be part of Home
+import { Link } from 'react-router-dom'; // Import Link for routing
+import Packages from './Packages';  // Import Packages component
+import Products from './Products';  // Import Products component
+import './Home.css'; // Importing the updated CSS file
 
 function Home() {
   return (
     <div>
-      {/* Landing Page Section */}
-      <section id="home" style={{ height: '100vh', backgroundColor: '#f0f0f0' }}>
-        <h1>Welcome to Our Internet Service Provider</h1>
-        <p>This is the landing page. Scroll down to view more.</p>
+      <section className="home-section">
+        <div className="header-text">
+          <h4>Internet Great Plan</h4>
+        </div>
+
+        <div className="content-container">
+          <h1>Get Network services</h1>
+          <p>
+            Introducing AT&T’s Choice Package, giving you the most free services available in the
+            industry at a rate you can't afford to ignore.
+          </p>
+
+          <div className="actions">
+            <button className="discover-more">Discover more</button>
+            {/* Add link to "Get your connection" button */}
+            <Link to="/packages">
+              <button className="get-connection">Get your connection</button>
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* Packages Section */}
-      <section id="packages" style={{ height: '100vh', backgroundColor: '#e0e0e0' }}>
+      <section id="packages">
         <Packages />
       </section>
 
       {/* Products Section */}
-      <section id="products" style={{ height: '100vh', backgroundColor: '#d0d0d0' }}>
+      <section id="products">
         <Products />
       </section>
     </div>
