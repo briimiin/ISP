@@ -49,7 +49,9 @@ function Navbar() {
         <li><Link to="/cart" onClick={toggleMenu}>Cart</Link></li>
         <li><Link to="/payment" onClick={toggleMenu}>Payment</Link></li>
         <li><Link to="/admin" onClick={toggleMenu}>Admin Dashboard</Link></li>
-        <li><Link to="/contactus" onClick={toggleMenu}>ContactUs</Link></li>
+        <li><Link to="/contactus" onClick={toggleMenu}>Contact Us</Link></li>
+        <li><Link to="/coverage" onClick={toggleMenu}>Coverage</Link></li> {/* Added Coverage link */}
+        <li><Link to="/installationprocess" onClick={toggleMenu}>Installation</Link></li> {/* Added Coverage link */}
 
       </ul>
     </nav>

@@ -1,4 +1,3 @@
-// Coverage.js
 import React from 'react';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';  // Leaflet CSS
@@ -20,7 +19,42 @@ const Coverage = () => {
     <div className="coverage-section">
       <h2>Coverage Area</h2>
       <p>We currently provide service in Kitengela.</p>
-      
+
+      {/* Table Section */}
+      <div className="coverage-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Town</th>
+              <th>Triple Play</th>
+              <th>Free Installation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Kitengela Town</td>
+              <td>Kitengela</td>
+              <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
+              <td>Free installation & free WiFi modem & digital TV decoder</td>
+            </tr>
+            <tr>
+              <td>Mlimani Estate</td>
+              <td>Kitengela</td>
+              <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
+              <td>Free installation & free WiFi modem & digital TV decoder</td>
+            </tr>
+            <tr>
+              <td>Yukos</td>
+              <td>Kitengela</td>
+              <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
+              <td>Free installation & free WiFi modem & digital TV decoder</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      {/* Map Section */}
       <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '400px', width: '100%' }}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

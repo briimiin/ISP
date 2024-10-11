@@ -4,6 +4,7 @@ import Packages from './Packages';  // Import Packages component
 import Products from './Products';  // Import Products component
 import './Home.css'; // Importing the updated CSS file
 import Coverage from './Coverage';
+import Testimonials from './Testimonials';
 function Home() {
   return (
     <div>
@@ -41,6 +42,9 @@ function Home() {
        {/* Coverage Section */}
        <section id="coverage">
         <Coverage />
+      </section>
+      <section id="coverage">
+        <Testimonials />
       </section>
     </div>
   );

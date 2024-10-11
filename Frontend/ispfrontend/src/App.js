@@ -9,6 +9,9 @@ import Payment from './components/Payment';
 import AdminDashboard from './components/AdminDashboard';
 import ContactUs from './components/ContactUs';
 import Footer from './components/Footer';
+import Coverage from './components/Coverage';
+import Testimonials from './components/Testimonials';
+import InstallationProcess from './components/InstallationProcess';
 function App() {
   return (
     <>
@@ -24,6 +27,11 @@ function App() {
         <Route path="/payment" element={<Payment />} />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/coverage" element={<Coverage />} />
+        <Route path="/testimonials" element={<Testimonials />} />
+        <Route path="/installationprocess" element={<InstallationProcess />} />
+
+
       </Routes>
       <Footer />
 
