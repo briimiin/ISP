@@ -1,0 +1,16 @@
+.coverage-section {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f0f0f0;
+  }
+  
+  .coverage-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .coverage-section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+  }
+  

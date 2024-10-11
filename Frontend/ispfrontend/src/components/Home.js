@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'; // Import Link for routing
 import Packages from './Packages';  // Import Packages component
 import Products from './Products';  // Import Products component
 import './Home.css'; // Importing the updated CSS file
-
+import Coverage from './Coverage';
 function Home() {
   return (
     <div>
@@ -37,6 +37,10 @@ function Home() {
       {/* Products Section */}
       <section id="products">
         <Products />
+      </section>
+       {/* Coverage Section */}
+       <section id="coverage">
+        <Coverage />
       </section>
     </div>
   );
