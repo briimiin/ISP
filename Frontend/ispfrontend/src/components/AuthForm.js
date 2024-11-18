@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './AuthForm.css';
 
-axios.defaults.baseURL = 'http://127.0.0.1:5000'; // Set base URL for all axios requests
+axios.defaults.baseURL = 'https://brimin.onrender.com/'; // Set base URL for all axios requests
 
 function AuthForm() {
     const [isRegister, setIsRegister] = useState(false); // Toggle between Login and Register

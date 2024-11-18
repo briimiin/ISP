@@ -16,7 +16,7 @@ function SubscriptionForm() {
     e.preventDefault();
     setLoading(true);
     try {
-      const response = await axios.post('http://127.0.0.1:5000/subscribe', {
+      const response = await axios.post('https://brimin.onrender.com//subscribe', {
         package_id: packageId,
         area_of_residence: areaOfResidence,
         phone_number: phoneNumber,

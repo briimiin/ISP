@@ -10,7 +10,7 @@ function Packages() {
   useEffect(() => {
     const fetchPackages = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/packages');
+        const response = await axios.get('https://brimin.onrender.com/packages');
         setPackages(response.data);
       } catch (error) {
         console.error("Error fetching packages:", error);
