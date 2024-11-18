@@ -36,19 +36,19 @@ const Coverage = () => {
               <td>Kitengela Town</td>
               <td>Kitengela</td>
               <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
-              <td>Free installation & free WiFi modem & digital TV decoder</td>
+              <td>Free installation & a WiFi modem</td>
             </tr>
             <tr>
               <td>Mlimani Estate</td>
               <td>Kitengela</td>
               <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
-              <td>Free installation & free WiFi modem & digital TV decoder</td>
+              <td>Free installation & a WiFi modem</td>
             </tr>
             <tr>
               <td>Yukos</td>
               <td>Kitengela</td>
               <td>10Mbps, 20Mbps, 50Mbps, 100Mbps</td>
-              <td>Free installation & free WiFi modem & digital TV decoder</td>
+              <td>Free installation & a WiFi modem</td>
             </tr>
           </tbody>
         </table>

@@ -13,9 +13,9 @@ body, html {
   flex-direction: column;
   justify-content: flex-start; /* Align content to the top */
   align-items: flex-start; /* Align all elements from the left */
-  background-color: #1c1c1c;
-  color: white;
-  padding: 20px 50px;
+  background-color: white;
+  color:   black;
+    padding: 20px 50px;
   position: relative;
   min-height: 30vh; /* Increase the height slightly */
   z-index: 1;

@@ -1,41 +1,32 @@
-import React from 'react';
-import './Packages.css'; // Custom CSS for card styling
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate hook
+import './Packages.css';
 
 function Packages() {
-  const packages = [
-    {
-      title: 'Basic Plan',
-      description: 'Enjoy speeds of up to 50 Mbps, perfect for casual browsing and streaming.',
-      price: '$29.99/month',
-      features: ['50 Mbps Speed', 'Unlimited Data', 'Free Router'],
-    },
-    {
-      title: 'Premium Plan',
-      description: 'Get up to 200 Mbps for serious streaming and gaming.',
-      price: '$49.99/month',
-      features: ['200 Mbps Speed', 'Unlimited Data', 'Free Installation'],
-    },
-    {
-      title: 'Ultimate Plan',
-      description: 'Up to 1 Gbps speeds for heavy users, ideal for smart homes.',
-      price: '$99.99/month',
-      features: ['1 Gbps Speed', 'Priority Support', 'Free Router & Installation'],
-    },
-  ];
+  const [packages, setPackages] = useState([]);
+  const navigate = useNavigate(); // Set up navigation
+
+  useEffect(() => {
+    const fetchPackages = async () => {
+      try {
+        const response = await axios.get('http://127.0.0.1:5000/packages');
+        setPackages(response.data);
+      } catch (error) {
+        console.error("Error fetching packages:", error);
+      }
+    };
+    fetchPackages();
+  }, []);
 
   return (
     <section className="packages-container">
-      {packages.map((pkg, index) => (
-        <div className="package-card" key={index}>
-          <h3>{pkg.title}</h3>
+      {packages.map((pkg) => (
+        <div className="package-card" key={pkg.id}>
+          <h3>{pkg.name}</h3>
           <p>{pkg.description}</p>
-          <p className="price">{pkg.price}</p>
-          <ul>
-            {pkg.features.map((feature, i) => (
-              <li key={i}>{feature}</li>
-            ))}
-          </ul>
-          <button className="subscribe-btn">Subscribe</button>
+          <p className="price">Ksh{pkg.price}/month</p>
+          <button className='subscribe-btn'   onClick={() => navigate(`/subscribe/${pkg.id}`)}>Subscribe</button>
         </div>
       ))}
     </section>

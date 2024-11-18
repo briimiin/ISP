@@ -5,6 +5,7 @@ import Products from './Products';  // Import Products component
 import './Home.css'; // Importing the updated CSS file
 import Coverage from './Coverage';
 import Testimonials from './Testimonials';
+
 function Home() {
   return (
     <div>
@@ -36,9 +37,9 @@ function Home() {
       </section>
 
       {/* Products Section */}
-      <section id="products">
+      {/* <section id="products">
         <Products />
-      </section>
+      </section> */}
        {/* Coverage Section */}
        <section id="coverage">
         <Coverage />

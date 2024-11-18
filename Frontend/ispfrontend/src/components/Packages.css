@@ -1,6 +1,6 @@
 /* Packages container for mobile responsiveness */
 .packages-container {
-    background-color: #1c1c1c;
+    background-color: white;
     display: flex;
     flex-direction: column; /* Stack cards vertically on mobile */
     align-items: center;
@@ -10,7 +10,7 @@
   
   /* Individual card styling */
   .package-card {
-    background-color: #fff;
+    background-color: #f0f0f0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
@@ -34,7 +34,7 @@
   .package-card .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #f0a500; /* Accent color for price */
+    color: #ff5722;
     text-align: left; /* Align price to the left */
   }
   
@@ -50,7 +50,7 @@
   }
   
   .package-card .subscribe-btn {
-    background-color: #f0a500;
+    background-color: #ff5722;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;

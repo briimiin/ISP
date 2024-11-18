@@ -9,12 +9,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #1c1c1c;
+    background-color: white;
     padding: 1rem;
   }
   
   nav .logo a {
-    color: #fff;
+    color: black;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
@@ -31,7 +31,7 @@
   
   .nav-links li a,
   .nav-links li button {
-    color: white;
+    color: black;
     background: none;
     border: none;
     font-size: 1rem;
@@ -54,7 +54,7 @@
 .menu-toggle .hamburger {
   width: 30px; /* Increase width slightly for better alignment */
   height: 3px;
-  background-color: white;
+  background-color: black;
   margin: 5px 0; /* Increase margin slightly */
   transition: all 0.3s ease;
   border-radius: 2px;
@@ -89,8 +89,8 @@
       right: 0;
       left: auto;
       width: 66vw;
-      height: 90vh;
-      background-color: #1c1c1c;
+      height: 100vh;
+      background-color: white;
       display: flex;
       flex-direction: column;
       justify-content: flex-start; /* Start at the top */
